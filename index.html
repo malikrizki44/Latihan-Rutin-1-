@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 1 Adiwerna</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background: #0b3d91;
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            font-size: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(rgba(0, 35, 90, 0.75), rgba(0, 35, 90, 0.75)),
+                url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #ffd700;
+            color: #111;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* Section */
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #0b3d91;
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
+
+        /* Profil */
+        .profile {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Jurusan */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #0b3d91;
+            margin-bottom: 10px;
+        }
+
+        /* Fasilitas */
+        .facilities {
+            background: #eaf0f8;
+        }
+
+        .facility-list {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .facility {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Kontak */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b3d91;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>SMKN 1 Adiwerna</h2>
+
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#jurusan">Jurusan</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Beranda -->
+    <header class="hero" id="beranda">
+        <div>
+            <h1>SMK Negeri 1 Adiwerna</h1>
+
+            <p>
+                Sekolah Menengah Kejuruan yang berkomitmen
+                dalam menghasilkan generasi yang kompeten,
+                berkarakter, dan siap menghadapi dunia kerja.
+            </p>
+
+            <a href="#profil" class="button">Pelajari Lebih Lanjut</a>
+        </div>
+    </header>
+
+    <!-- Profil -->
+    <section id="profil">
+        <h2>Profil Sekolah</h2>
+
+        <div class="profile">
+            <p>
+                <strong>SMK Negeri 1 Adiwerna</strong> merupakan salah satu
+                sekolah menengah kejuruan yang berada di Kabupaten Tegal,
+                Jawa Tengah.
+            </p>
+
+            <br>
+
+            <p>
+                Sekolah ini menyelenggarakan pendidikan kejuruan yang
+                bertujuan membekali peserta didik dengan pengetahuan,
+                keterampilan, karakter, serta kesiapan untuk melanjutkan
+                pendidikan maupun memasuki dunia kerja.
+            </p>
+        </div>
+    </section>
+
+    <!-- Jurusan -->
+    <section id="jurusan">
+        <h2>Program Keahlian</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Teknik Otomotif</h3>
+                <p>
+                    Mempelajari teknologi kendaraan,
+                    perawatan, perbaikan, dan sistem otomotif.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Teknik Elektronika</h3>
+                <p>
+                    Mempelajari sistem elektronika,
+                    kelistrikan, dan teknologi perangkat elektronik.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Pengembangan Perangkat Lunak</h3>
+                <p>
+                    Mempelajari pemrograman, pengembangan aplikasi,
+                    website, dan teknologi perangkat lunak.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Desain Komunikasi Visual</h3>
+                <p>
+                    Mempelajari desain grafis, komunikasi visual,
+                    multimedia, dan industri kreatif.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Fasilitas -->
+    <section id="fasilitas" class="facilities">
+        <h2>Fasilitas Sekolah</h2>
+
+        <div class="facility-list">
+
+            <div class="facility">
+                <h3>Laboratorium</h3>
+                <p>Laboratorium untuk mendukung kegiatan praktik siswa.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Bengkel Praktik</h3>
+                <p>Tempat siswa mengembangkan keterampilan kejuruan.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Perpustakaan</h3>
+                <p>Fasilitas untuk mendukung kegiatan membaca dan belajar.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Ruang Kelas</h3>
+                <p>Ruang pembelajaran untuk kegiatan akademik siswa.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="contact">
+        <h2>Kontak</h2>
+
+        <p><strong>Nama:</strong> SMK Negeri 1 Adiwerna</p>
+        <p><strong>Lokasi:</strong> Kabupaten Tegal, Jawa Tengah</p>
+        <p><strong>Website:</strong> Informasi resmi sekolah</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 SMK Negeri 1 Adiwerna.
+            Website sederhana untuk keperluan pembelajaran.
+        </p>
+    </footer>
+
+</body>
+</html>
